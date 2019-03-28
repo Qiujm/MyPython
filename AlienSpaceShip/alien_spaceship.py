@@ -12,6 +12,7 @@ def run_game():
     screen = pygame.display.set_mode((ai_settings.screen_width, ai_settings.screen_height))
     pygame.display.set_caption("AlienSpaceShip")
     alien_group = pygame.sprite.Group()
+
     bullet_group = pygame.sprite.Group()
     ai_ship = ship.Ship(ai_settings, screen)
     # ai_ship = pygame.sprite.Group()

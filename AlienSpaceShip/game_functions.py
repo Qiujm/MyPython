@@ -5,10 +5,10 @@ import time
 
 def game_control(ai_ship, ai_settings, screen, bullet_group, alien_group,state,play_botton):
     """生成外星飞船"""
-    if len(alien_group) == 0:
-        # time.sleep(3)
-        generate_alien(ai_settings, screen, alien_group)
-
+    # if len(alien_group) == 0:
+    #     # time.sleep(3)
+    #     generate_alien(ai_settings, screen, alien_group)
+    generate_alien(ai_settings, screen, alien_group)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
@@ -67,8 +67,14 @@ def alien_destroyed(bullet_group,alien_group):
 
 def generate_alien(ai_settings, screen, alien_group):
     if len(alien_group) < ai_settings.aliens_numlimit:
+        level = 3
         new_alien = alien.Alien(ai_settings, screen)
         alien_group.add(new_alien)
+        for aliens in alien_group:
+            rect=aliens.image.get_rect()
+            # print(type(rect))
+            rect.y -= level * rect.width
+
 
 # def ship_update():
 

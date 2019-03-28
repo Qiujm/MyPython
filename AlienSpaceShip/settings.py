@@ -4,7 +4,7 @@ class Settings():
 
     def __init__(self):
         # screen parameters
-        self.screen_width = 900
+        self.screen_width = 500
         self.screen_height = 600
         self.bgcolor = (230, 230, 230)
 
@@ -20,7 +20,7 @@ class Settings():
         # print(type(self.bullet_color))
 
         self.aliens_speedx = 1.0
-        self.aliens_speedy = 0.25
-        self.aliens_numlimit = 10
+        self.aliens_speedy = 0.05
+        self.aliens_numlimit = 3
 
 

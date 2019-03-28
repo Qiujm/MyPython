@@ -23,7 +23,7 @@ class Alien(pygame.sprite.Sprite):
     def update(self):
         # self.trackx()
         self.y += self.ai_settings.aliens_speedy
-        self.rect.top = self.y
+        self.rect.y = self.y
 
     def trackx(self):
 
